@@ -1,0 +1,99 @@
+start menu with git
+
+Administrator@PC-20180411SCIX MINGW64 ~
+$ cd learngit                         ##open the work dictory
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ pwd
+/c/Users/Administrator/learngit
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git add readme.txt                  ##open a file 
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git status                          ##look the status,
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.txt
+
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git diff                            ##find the difference
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git log                             ## search for histoury
+commit 5f43bc02b3685d740e98cbedf4ac5e8a4b3a57c5 (HEAD -> master)
+Author: kskschen <752211644@qq.com>
+Date:   Fri Jun 22 11:20:10 2018 +0800
+
+    add distributed
+
+commit 024dabcbbc79277ea5003415474acecf21e37b1c
+Author: kskschen <752211644@qq.com>
+Date:   Fri Jun 22 11:02:42 2018 +0800
+
+    wrote a  readme file
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git add readme.txt                      ##open the specific file
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git commit -m "append GPL"              ## step2 :commit the changes
+[master 48763a1] append GPL
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git log                                     ##look at the commit history
+commit 48763a1603e3c774045333e4a19d613e8c03f62c (HEAD -> master)
+Author: kskschen <752211644@qq.com>
+Date:   Fri Jun 22 11:31:43 2018 +0800
+
+    append GPL
+
+commit 5f43bc02b3685d740e98cbedf4ac5e8a4b3a57c5
+Author: kskschen <752211644@qq.com>
+Date:   Fri Jun 22 11:20:10 2018 +0800
+
+    add distributed
+
+commit 024dabcbbc79277ea5003415474acecf21e37b1c
+Author: kskschen <752211644@qq.com>
+Date:   Fri Jun 22 11:02:42 2018 +0800
+
+    wrote a  readme file
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git reset --hard HEAD^                    ##go back to the last one
+HEAD is now at 5f43bc0 add distributed
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ cat readme.txt                            ##look at the specific file
+git is a  version control systerm
+git is free software
+Git is a distributed version control system.
+Git is free software
+
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git reset --hard 48763a                  ##go back the last commit version 
+HEAD is now at 48763a1 append GPL
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ cat readme.txt
+
+Administrator@PC-20180411SCIX MINGW64 ~/learngit (master)
+$ git reflog                               ##look at the  order history
+48763a1 (HEAD -> master) HEAD@{0}: reset: moving to 48763a
+5f43bc0 HEAD@{1}: reset: moving to HEAD^
+48763a1 (HEAD -> master) HEAD@{2}: commit: append GPL
+5f43bc0 HEAD@{3}: commit: add distributed
+024dabc HEAD@{4}: commit (initial): wrote a readme file
+
+
+
+
+
+
+
