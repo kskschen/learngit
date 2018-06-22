@@ -92,6 +92,8 @@ $ git reflog                               ##look at the  order history
 024dabc HEAD@{4}: commit (initial): wrote a readme file
 
 
+################git add  in fact add something to the stage(for temporary),commit is to add these changes  commit to the branches(master default) for one time
+################git add 实际上就是把工作区文件中修改的东西防在暂存区（stage），之后通过git commit可以一次性将暂存区的内容提交到分支（默认为系统自己建立的master）
 
 
 
